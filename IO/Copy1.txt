@@ -1,0 +1,44 @@
+PACKAGE IO;
+/*复制一个图片
+ * 思路：
+ * 1.用字节读取流对象和图片关联
+ * 2.用字节写入流对象创建一个图片文件，用于存储获取到的图片数据
+ * 3.通过循环读写，完成数据的存储
+ * 4.关闭资源*/
+IMPORT JAVA.IO.*;
+
+PUBLIC CLASS COPYPIC {
+	PUBLIC STATIC VOID MAIN(STRING[] ARGS) {
+           FILEOUTPUTSTREAM FOS=NULL;
+           FILEINPUTSTREAM FIS=NULL;
+           TRY{
+        	   FOS=NEW FILEOUTPUTSTREAM("D:\\USERS\\ADMIN\\WORKSPACE\\IO\\SRC\\273-1-1600X9001.JPG");
+        	   FIS=NEW FILEINPUTSTREAM("D:\\USERS\\ADMIN\\WORKSPACE\\IO\\SRC\\273-1-1600X900.JPG");
+               BYTE[] BUF=NEW BYTE[1024];
+               INT LEN=0;
+               WHILE((LEN=FIS.READ(BUF))!=-1){
+            	   FOS.WRITE(BUF,0,LEN);
+               }
+           }
+           CATCH(IOEXCEPTION E){
+        	   THROW NEW RUNTIMEEXCEPTION("复制失败");
+           }
+	       FINALLY{
+	    	   TRY{
+	    		   IF(FIS!=NULL)
+	    			   FIS.CLOSE();
+	    	   }
+	    	   CATCH(IOEXCEPTION E){
+	    		   THROW NEW RUNTIMEEXCEPTION("读取关闭失败");
+	    	   }
+	    	   TRY{
+	    		   IF(FOS!=NULL)
+	    			   FOS.CLOSE();
+	    	   }
+	    	   CATCH(IOEXCEPTION E){
+	    		   THROW NEW RUNTIMEEXCEPTION("写入关闭失败");
+	    	   }
+	       }
+	
+	}
+}

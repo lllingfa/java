@@ -1,0 +1,3 @@
+2016-08-01 18:54:11
+java.lang.ArrayIndexOutOfBoundsException: 3
+	at IO.ExceptionInfo.main(ExceptionInfo.java:10)
