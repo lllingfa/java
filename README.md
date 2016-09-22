@@ -1,5 +1,6 @@
 # java
 there are code  programming in java which is able to used for the primarers.
+
 it includes some chapters listed for the following details:
 1.array:some sorting applications and use it to transform numbers (toBin,toHex)
 2.String:usages in the JDK API
