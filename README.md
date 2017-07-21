@@ -25,4 +25,4 @@ it includes some chapters listed for the following details:
 
 11.Regex
 
-i have learned from the teacher bi's learing java in 25 days and it can be served as excellent learning materials and i believe it can help when you choose this language as your career.
+i have learned from the teacher bi's learing java in 25 days and it can be served as good learning materials.
